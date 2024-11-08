@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\IDE\\Repositories\\C\\Chpater_2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E19B5E44-BF31-478B-ABAA-FFB708E3EF5F}|Chpater_2.vcxproj|D:\\IDE\\Repositories\\C\\Chpater_2\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E19B5E44-BF31-478B-ABAA-FFB708E3EF5F}|Chpater_2.vcxproj|solutionrelative:main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.c",
+              "DocumentMoniker": "D:\\IDE\\Repositories\\C\\Chpater_2\\main.c",
+              "RelativeDocumentMoniker": "main.c",
+              "ToolTip": "D:\\IDE\\Repositories\\C\\Chpater_2\\main.c",
+              "RelativeToolTip": "main.c",
+              "ViewState": "AgIAAGoDAAAAAAAAAAAAAIoDAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-11-08T03:28:46.315Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
