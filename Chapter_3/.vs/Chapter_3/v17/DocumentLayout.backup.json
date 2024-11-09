@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\IDE\\Repositories\\C\\Chapter_3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A84E0200-BC35-40DB-B9EE-689A9A79EB91}|Chapter_3.vcxproj|D:\\IDE\\Repositories\\C\\Chapter_3\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A84E0200-BC35-40DB-B9EE-689A9A79EB91}|Chapter_3.vcxproj|solutionrelative:main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.c",
+              "DocumentMoniker": "D:\\IDE\\Repositories\\C\\Chapter_3\\main.c",
+              "RelativeDocumentMoniker": "main.c",
+              "ToolTip": "D:\\IDE\\Repositories\\C\\Chapter_3\\main.c",
+              "RelativeToolTip": "main.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-11-09T07:22:28.734Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
