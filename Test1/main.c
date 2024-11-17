@@ -239,10 +239,255 @@
 //}
 
 
-/* 找出盗窃者 */
+/* ⾃幂数 */
+//#include <stdio.h>
+//#include <math.h>
+//int main()
+//{
+//	int num = 0, a = 0, b = 0, c = 0, d = 0, e = 0, f = 0, j = 0;
+//	for (int i = 1; i <= 100000; i++)
+//	{
+//		a = i % 10;
+//		b = i / 10 % 10;
+//		c = i / 10 / 10 % 10;
+//		d = i / 10 / 10 / 10 % 10;
+//		e = i / 10 / 10 / 10 / 10 % 10;
+//		f = i / 10 / 10 / 10 / 10 / 10 % 10;
+//
+//		if (b == 0 && c ==0 && d == 0 && e == 0 && f == 0)
+//			j = 1;
+//		else if (c == 0 && d == 0 && e == 0 && f == 0)
+//			j = 2;
+//		else if (d == 0 && e == 0 && f == 0)
+//			j = 3;
+//		else if (e == 0 && f == 0)
+//			j = 4;
+//		else if (f == 0)
+//			j = 5;
+//		else
+//			j = 6;
+//
+//		if (pow(a, j) + pow(b, j) + pow(c, j) + pow(d, j) + pow(e, j) + pow(f, j) == i)
+//			printf("%d ", i);
+//	}
+//	return 0;
+//}
+
+//#include <stdio.h>
+//#include <math.h>
+//int main()
+//{
+//	int i = 0;
+//	for (i = 1; i <= 100000; i++)
+//	{
+//		//判断i是否是⾃幂数
+//		//1. 计算i的位数n
+//		int n = 1;
+//		int tmp = i;
+//		while (tmp / 10)	// while (tmp / 10 > 1)
+//		{
+//			n++;
+//			tmp /= 10;
+//		}
+//		//2. 计算i的每⼀位的n次⽅之和
+//		tmp = i;
+//		int sum = 0;
+//		while (tmp)
+//		{
+//			sum += (int)pow(tmp % 10, n);
+//			tmp /= 10;
+//		}
+//		//3. 输出
+//		if (sum == i)
+//			printf("%d ", i);
+//	}
+//	return 0;
+//}
+
+
+///* 打印菱形 */
+//#include <stdio.h>
+//int main()
+//{
+//	int n = 0;
+//	//输⼊
+//	scanf("%d", &n);
+//	//打印
+//	//打印上半部分的n⾏
+//	int i = 0;
+//	for (i = 0; i < n; i++)
+//	{
+//		//打印空格
+//		int j = 0;
+//		for (j = 0; j < n - 1 - i; j++)
+//		{
+//			printf(" ");
+//		}
+//		//打印*
+//		for (j = 0; j < 2 * i + 1; j++)
+//		{
+//			printf("*");
+//		}
+//		printf("\n");
+//	}
+//
+//	//打印下半部分的n-1⾏
+//	for (i = 0; i < n; i++)
+//	{
+//		//打印空格
+//		int j = 0;
+//		for (j = 0; j <= i; j++)
+//		{
+//			printf(" ");
+//		}
+//		//打印*
+//		for (j = 0; j < 2 * (n - 1 - i) - 1; j++)
+//		{
+//			printf("*");
+//		}
+//		printf("\n");
+//	}
+//	return 0;
+//}
+
+
+///* 喝多少瓶汽⽔ */
+//#include <stdio.h>
+//int main()
+//{
+//	int n = 0, total = 0, empty = 0;
+//	scanf("%d", &n);
+//	total = total + n;
+//	empty = empty + n;
+//	while (empty >= 2)
+//	{
+//		total = total + empty / 2;	// 每次将剩余的空瓶⼦ empty 除以 2，表⽰可以换取的汽⽔数量，将这些汽⽔数量加到 total 中。
+//		empty = empty / 2 + empty % 2;	// 将剩余的空瓶⼦ empty 除以 2 取余数，计算空瓶⼦换了汽⽔后有没有轮空的空瓶⼦。
+//	}
+//	printf("%d\n", total);
+//	return 0;
+//}
+
+
+///* 字符转换 */
+//#include <stdio.h>
+//int main()
+//{
+//	char a[30];
+//	scanf("%s", &a);
+//	for (int i = 0; i < 30; i++)
+//	{
+//		if (a[i] >= 65 && a[i] <= 90)	// 大写字母
+//			a[i] = a[i] + 32;
+//		else if (a[i] >= 97 && a[i] <= 122)	// 小写字母
+//			a[i] = a[i] - 32;
+//	}
+//	printf("%s", a);
+//	return 0;
+//}
+
+//#include <stdio.h>
+//#include <ctype.h>
+//int main()
+//{
+//	char buf[31] = { 0 };
+//	//输⼊字符串
+//	scanf("%[^\n]s", buf);
+//	int i = 0;
+//	while (buf[i])
+//	{
+//		//判断当前字符是否为⼩写字⺟
+//		if (islower(buf[i]))
+//			buf[i] = toupper(buf[i]);
+//		//判读那当前字符是否为⼤写字⺟
+//		else if (isupper(buf[i]))
+//			buf[i] = tolower(buf[i]);
+//		i++;
+//	}
+//	printf("%s\n", buf);
+//	return 0;
+//}
+
+
+///* 交换两个整数 */
+//#include <stdio.h>
+//int Swap(int* pa, int* pb)	// 传入两个整型指针，进行交换
+//{
+//	int temp = 0;
+//	temp = *pa;
+//	*pa = *pb;
+//	*pb = temp;
+//}
+//
+//int main()
+//{
+//	int x = 0, y = 0;
+//	scanf("%d %d", &x, &y);
+//	Swap(&x, &y); // 将需要交换值的两个整数变量的地址作为参数传递给函数，进⾏交换
+//	printf("%d %d", x, y);
+//	return 0;
+//}
+
+
+///* 求两个整数的平均值 */
+//#include <stdio.h>
+//int average(int a, int b)
+//{
+//	int avg = a + (b - a) / 2;		// 防止溢出 int avg = (a + b) / 2;
+//	return avg;
+//}
+//
+//int main()
+//{
+//	int m = 0, n = 0, x = 0;
+//	scanf("%d %d", &m, &n);
+//	x = average(m, n);
+//	printf("%d", x);
+//	return 0;
+//}
+
+
+///* 求字符串⻓度 */
+//#include <stdio.h>
+//int Strlen(const char* str)
+//{ //定义变量计数
+//	int count = 0;
+//	//利⽤指针遍历字符串
+//	while (*str)
+//	{
+//		//计数加⼀
+//		count++;//字符串指针后移，遍历下⼀个字符
+//		str++;
+//	}
+//	return count;
+//}
+//
+//int main()
+//{
+//	char arr[30];
+//	scanf("%s", arr);
+//	int a = Strlen(arr);
+//	printf("%d", a);
+//	return 0;
+//}
+
+
+// 求字符串⻓度【进阶版】
 #include <stdio.h>
+int Strlen(const char* str)		// 递归
+{
+	if (*str == '\0')
+		return 0;
+	else
+		//返回1加后⾯⼦字符串的和
+		return 1 + Strlen(str + 1);
+}
+
 int main()
 {
-
+	char arr[30];
+	scanf("%s", arr);
+	int a = Strlen(arr);
+	printf("%d", a);
 	return 0;
 }
