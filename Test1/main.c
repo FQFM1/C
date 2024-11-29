@@ -472,22 +472,236 @@
 //}
 
 
-// 求字符串⻓度【进阶版】
-#include <stdio.h>
-int Strlen(const char* str)		// 递归
-{
-	if (*str == '\0')
-		return 0;
-	else
-		//返回1加后⾯⼦字符串的和
-		return 1 + Strlen(str + 1);
-}
+///* 求字符串⻓度-进阶 */ 
+//#include <stdio.h>
+//int Strlen(const char* str)		// 递归
+//{
+//	if (*str == '\0')
+//		return 0;
+//	else
+//		//返回1加后⾯⼦字符串的和
+//		return 1 + Strlen(str + 1);
+//}
+//
+//int main()
+//{
+//	char arr[30];
+//	scanf("%s", arr);
+//	int a = Strlen(arr);
+//	printf("%d", a);
+//	return 0;
+//}
 
+
+///* 逆序字符串 */
+//#include <stdio.h>
+//void reverse(char* str)
+//{
+//	// 利⽤库函数求得字符串⻓度
+//	int len = strlen(str);
+//	// 定义两个字符串指针分别指向字符串⾸位和末位
+//	char* left = str;
+//	char* right = str + len - 1;
+//	// 当左指针在右指针左边时，进⾏交换
+//	while (left < right)
+//	{
+//		char tmp = *left;
+//		*left = *right;
+//		*right = tmp;
+//		// 两个指针相向移动⼀位
+//		left++;
+//		right--;
+//	}
+//}
+//
+//int main()
+//{
+//	char arr[30];
+//	scanf("%s", arr);
+//	reverse(arr);
+//	printf("%s", arr);
+//	return 0;
+//}
+
+
+///* 求数字的每⼀位之和 */
+//#include <stdio.h>
+//int digit_sum(int m)
+//{
+//	int a = 0, s = 0, c = 0;
+//	while (m > 0)
+//	{
+//		a = m % 10;
+//		s = s + a;
+//		m = m / 10;
+//	}
+//	return s;
+//	
+//}
+//
+//int main()
+//{
+//	int x = 0, sum = 0;
+//	scanf("%d", &x);
+//	sum = digit_sum(x);
+//	printf("%d", sum);
+//	return 0;
+//}
+
+
+///* 判断回⽂字符串 */
+//#include <stdio.h>
+//int is_palindrome_string(char a[])
+//{
+//	int len = strlen(a);
+//	char* left = a;
+//	char* right = a + len - 1;
+//	while (left < right)
+//	{
+//		if (*left != *right)
+//		{
+//			return 0;
+//			break;
+//		}
+//		left++;
+//		right--;
+//	}
+//	return 1;
+//}
+//
+//int main()
+//{
+//	char arr[30];
+//	scanf("%s", arr);
+//	if(is_palindrome_string(arr) == 1)
+//		printf("Yes");
+//	else if(is_palindrome_string(arr) == 0)
+//		printf("No");
+//	return 0;
+//}
+
+
+///* 计算天数 */
+//#include <stdio.h>
+//int RunNianhPanDuan(int year)
+//{
+//	if (year % 4 == 0 && year % 100 != 0)
+//		return 1;
+//	else if (year % 400 == 0)
+//		return 1;
+//	else if (year % 100 == 0 && year % 400 != 0)
+//		return 0;
+//	else
+//		return 0;
+//}
+//
+//int main()
+//{
+//	int y = 0, m = 0;
+//	scanf("%d %d", &y, &m);
+//	if (m == 1 || m == 3 || m == 5 || m == 7 || m == 8 || m == 10 || m == 12)
+//		printf("31");
+//	if (m == 4 || m == 6 || m == 9 || m == 11)
+//		printf("30");
+//	if (m == 2)
+//	{
+//		if (RunNianhPanDuan(y) == 1)
+//			printf("29");
+//		else if (RunNianhPanDuan(y) == 0)
+//			printf("28");
+//	}
+//	return 0;
+//}
+
+//int get_month_of_day(int y, int m)
+//{ //将每个⽉份的天数记录在数组中
+//	int days[13] = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+//	//获取⽉份的天数
+//	int day = days[m];
+//	//特判⼆⽉天数是29天的情况
+//	if ((y % 4 == 0 && y % 100 != 0) || (y % 400 == 0))
+//	{
+//		if (m == 2)
+//			day += 1;
+//	}
+//	return day;
+//}
+//
+//int main()
+//{
+//	int y = 0;
+//	int m = 0;
+//	//输⼊
+//	scanf("%d %d", &y, &m);
+//	//获取y年m⽉的天数
+//	int ret = get_month_of_day(y, m);
+//	printf("%d\n", ret);
+//	return 0;
+//}
+
+
+///* 删除指定的数 */
+//#include <stdio.h>
+//int main()
+//{
+//	int arr[10] = { 0 };	// 输入数组
+//	int i = 0;
+//	for (i = 0; i < 10; i++)
+//	{
+//		scanf("%d", &arr[i]);
+//	}
+//	
+//	int n = 0;				// 输入整数
+//	scanf("%d", &n);
+//
+//	int j = 0;				// 删除
+//	for (i = 0; i < 10; i++)
+//	{
+//		// 若当前数与给定值不相同，不需要删除，将其填⼊第j个位置，将j后移
+//		if (arr[i] != n)
+//		{
+//			arr[j++] = arr[i];
+//		}
+//			
+//	}
+//
+//	for (i = 0; i < j; i++)		// 打印
+//	{
+//		printf("%d ", arr[i]);
+//	}
+//	
+//	return 0;
+//}
+
+
+///* 字符串拷贝 */
+//#include <stdio.h>
+//void my_strcpy(char* dest, const char* src)
+//{
+//	while (*src != '\0')
+//	{
+//		*dest = *src;
+//		dest++;
+//		src++;
+//	}
+//	// 拷⻉源字符串的结束标志
+//	*dest = '\0';
+//}
+//
+//int main()
+//{
+//	char a[] = "String a";
+//	char b[30] = "";
+//	my_strcpy(b, a);
+//	printf("%s", b);
+//	return 0;
+//}
+
+
+/* 合并有序数组 */
+#include <stdio.h>
 int main()
 {
-	char arr[30];
-	scanf("%s", arr);
-	int a = Strlen(arr);
-	printf("%d", a);
+		
 	return 0;
 }
